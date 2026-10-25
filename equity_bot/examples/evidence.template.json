@@ -1,0 +1,30 @@
+{
+  "YOUR_TICKER": {
+    "is_spac": null,
+    "business_model": "unknown",
+    "exposures": ["待核验"],
+    "financials": {
+      "source": "请填真实来源",
+      "url": "",
+      "published_at": "",
+      "fetched_at": "",
+      "verified": false,
+      "period_end": "",
+      "period_type": "TTM",
+      "version": "",
+      "currency": "USD",
+      "revenue": null,
+      "net_income": null,
+      "operating_cash_flow": null,
+      "capex": null,
+      "cash": null,
+      "debt": null,
+      "severe_risk": null,
+      "checks": {}
+    },
+    "valuation_evidence": {},
+    "event": {},
+    "news": [],
+    "news_aliases": []
+  }
+}

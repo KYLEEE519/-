@@ -1,0 +1,15 @@
+services:
+  ui:
+    build: .
+    env_file: .env
+    ports: ["127.0.0.1:8080:8080"]
+    volumes: ["botdata:/app/data", "./config.json:/app/config.json:ro", "./examples:/app/examples:ro"]
+    restart: unless-stopped
+  scheduler:
+    build: .
+    env_file: .env
+    command: ["python", "-m", "equitybot", "schedule"]
+    volumes: ["botdata:/app/data", "./config.json:/app/config.json:ro", "./examples:/app/examples:ro"]
+    restart: unless-stopped
+volumes:
+  botdata:

@@ -1,0 +1,252 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>研究审计</title><style>body{font:15px/1.65 system-ui,sans-serif;color:#20334a;background:#f3f6fa;margin:0}main{max-width:1150px;margin:auto;padding:30px}h1{font-size:28px}h2{margin-top:28px}article,.panel{background:white;border:1px solid #dce5ee;border-radius:12px;padding:18px;margin:14px 0}.tag{color:#087b78;font-weight:700}.warning{background:#fff2d8;padding:14px;border-radius:8px}small,.muted{color:#52677f}a{color:#1769aa}table{border-collapse:collapse;width:100%;background:white}td,th{border-bottom:1px solid #dce5ee;padding:9px;text-align:left}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}nav a{margin-right:22px}details{margin-top:12px}</style><main><h1>前向模拟跟踪</h1><p>价格收益不含分红；无实际下单，非投资组合业绩。</p><pre>[
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO000&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO001&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO002&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO003&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO004&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO005&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO006&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO007&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO008&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484119, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO009&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO010&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO011&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO012&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO013&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO014&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342103, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO015&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO016&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO017&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO018&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO019&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342103, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO020&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO021&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO022&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO023&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO024&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO025&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO026&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO027&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO028&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO029&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO030&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO031&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO032&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO033&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000124, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO034&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO035&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO037&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO038&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO040&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO041&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO042&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.014999999999999902, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO043&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO044&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO045&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO046&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO047&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO048&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO049&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045416, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO050&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.05442297930484097, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ],
+  [
+    &quot;1c4b07f4ec6eb0196240f490&quot;,
+    &quot;DEMO051&quot;,
+    &quot;{\&quot;10\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.054422979304840746, \&quot;price_return\&quot;: 0.03318177727862626, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;15\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.07271199699045439, \&quot;price_return\&quot;: 0.05685911033542301, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}, \&quot;5\&quot;: {\&quot;mae\&quot;: -0.015000000000000013, \&quot;mfe\&quot;: 0.03493405332342081, \&quot;price_return\&quot;: 0.0006479625703810221, \&quot;relative_return\&quot;: 0.0, \&quot;status\&quot;: \&quot;价格收益，不含分红；研究审计非交易业绩\&quot;}}&quot;
+  ]
+]</pre></main></html>

@@ -1,0 +1,7 @@
+# 本环境实际测试版本；完整项目依赖定义在pyproject.toml
+numpy==2.3.5
+pandas==2.2.3
+exchange-calendars==4.13.2
+requests==2.34.2
+flask==3.1.3
+pytest==9.1.1

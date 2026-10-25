@@ -1,0 +1,30 @@
+{
+  "id": "1c4b07f4ec6eb0196240f490",
+  "quality": {
+    "scanned": 76,
+    "hard_pass": 58,
+    "unique_pass": 58,
+    "pool_count": 50,
+    "final_count": 10,
+    "industry_counts": {
+      "2100": 1,
+      "1500": 2,
+      "1000": 1,
+      "1100": 1,
+      "1200": 1,
+      "1300": 1,
+      "1400": 1,
+      "1600": 1,
+      "1700": 1
+    },
+    "hard_compliance": 1.0,
+    "verified_news": 10,
+    "unknown_quality_checks": 0,
+    "new_unique_events": 50,
+    "novelty_note": "相对上次交易日报告的事件ID/原文URL变化，不代表事件重要性评分",
+    "new_count": 10
+  },
+  "warnings": [
+    "演示模式：全部公司、行情、新闻、财务及估值均为合成数据，不构成真实股票推荐。"
+  ]
+}

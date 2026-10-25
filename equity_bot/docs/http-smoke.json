@@ -1,0 +1,31 @@
+{
+  "/": {
+    "status": 200,
+    "bytes": 820647
+  },
+  "/pool": {
+    "status": 200,
+    "bytes": 4054610
+  },
+  "/rejected": {
+    "status": 200,
+    "bytes": 5701
+  },
+  "/history": {
+    "status": 200,
+    "bytes": 927
+  },
+  "/audit": {
+    "status": 200,
+    "bytes": 47936
+  },
+  "/api/latest": {
+    "status": 200,
+    "bytes": 2622024
+  },
+  "database": {
+    "immutable_runs_after_repeat": 1,
+    "audited_symbols": 50,
+    "actual_mail_records": 0
+  }
+}

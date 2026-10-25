@@ -1,0 +1,20 @@
+{
+  "min_market_cap": 5000000000,
+  "min_adv20": 10000000,
+  "min_range5": 0.05,
+  "pool_size": 50,
+  "final_size": 10,
+  "industry_cap": 2,
+  "cap_age_days": 3,
+  "financial_age_days": 200,
+  "evidence_age_days": 7,
+  "close_delay_minutes": 75,
+  "calendar": "XNYS",
+  "http_rpm": 5,
+  "http_timeout": 20,
+  "http_retries": 3,
+  "news_age_hours": 24,
+  "taxonomy": "SIC",
+  "allowed_exchanges": ["XNYS", "XNAS", "XASE"],
+  "max_symbols": 0
+}

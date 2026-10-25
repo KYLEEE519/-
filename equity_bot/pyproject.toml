@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "equity-research-bot"
+version = "0.1.0"
+description = "Evidence-first local US equity research, never trading"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<4", "exchange-calendars>=4.11,<5", "requests>=2.32,<3", "flask>=3.1,<4"]
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+[project.scripts]
+equitybot = "equitybot.cli:main"
+[tool.setuptools.packages.find]
+include = ["equitybot*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
